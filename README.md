@@ -9,6 +9,14 @@ A little program I made to help people practice scoring in Riichi Mahjong. All w
 
 https://scoringtrainer.konbamwa.net/
 
+## Translations
+
+This site supports multiple languages! Currently available:
+- English
+- Japanese (日本語)
+
+Want to help translate the site into another language? Check out the [Translation Guide](TRANSLATION_GUIDE.md) for detailed instructions on how to contribute translations.
+
 ## Disclaimer
 
 Please don't look too closely at the code in this repo, it might hurt your soul. This is my first React project and I have mixed feelings about how well I did. 

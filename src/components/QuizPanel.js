@@ -2,8 +2,10 @@ import React from "react";
 import { FormGroup, Form, Tooltip } from "reactstrap";
 
 import * as YakuConversion from "../scripts/YakuConversion";
+import { useTranslation } from "../i18n/I18nContext";
 
 function QuizPanel(props) {
+  const { t } = useTranslation();
   const agari = props.agari;
   const options = props.options;
 
@@ -81,14 +83,16 @@ function QuizPanel(props) {
               props.options.testHan,
               props.options.testFu,
               agari,
-              props.ignoreFuAnswer
+              props.ignoreFuAnswer,
+              t
             )}
             {generatePointsQuiz(
               props.options.testPoints,
               isTsumo,
               isDealer,
               pointsCalcSteps,
-              pointsCalcStepsDealer
+              pointsCalcStepsDealer,
+              t
             )}
             {
               !(props.options.testHan || props.options.testFu || props.options.testPoints) && (
@@ -105,7 +109,7 @@ function QuizPanel(props) {
 
       <div className="btns">
       <button className="checkAnswer unselectable" id="checkAnswer">
-          Check Answer
+          {t('buttons.checkAnswer')}
         </button>
 
         <button
@@ -114,7 +118,7 @@ function QuizPanel(props) {
           type="button"
           id="newHand"
         >
-          New Hand
+          {t('buttons.newHand')}
         </button>
       </div>
       </Form>
@@ -205,13 +209,13 @@ function formatHanList(agari) {
   return output;
 }
 
-function generateHanAndFuQuiz(isHanQuiz, isFuQuiz, agari, ignoreFuAnswer) {
+function generateHanAndFuQuiz(isHanQuiz, isFuQuiz, agari, ignoreFuAnswer, t) {
   const hanAndFuQuizRows = [];
 
   if (isHanQuiz) {
     hanAndFuQuizRows.push(
       <GenerateRow
-        label={"Han"}
+        label={t('quiz.han')}
         inputId="hanBox"
         outputId="hanAnswer"
         name="han"
@@ -222,7 +226,7 @@ function generateHanAndFuQuiz(isHanQuiz, isFuQuiz, agari, ignoreFuAnswer) {
   if (isFuQuiz) {
     hanAndFuQuizRows.push(
       <GenerateRow
-        label={"Fu"}
+        label={t('quiz.fu')}
         inputId="fuBox"
         outputId="fuAnswer"
         name="fu"
@@ -238,7 +242,8 @@ function generatePointsQuiz(
   isTsumo,
   isDealer,
   pointsCalculations,
-  pointsCalculationsDealer
+  pointsCalculationsDealer,
+  t
 ) {
   const pointQuizRows = [];
 
@@ -248,7 +253,7 @@ function generatePointsQuiz(
   if (isTsumo && isDealer) {
     pointQuizRows.push(
       <GenerateRow
-        label={["Points", <br />, "(from each)"]}
+        label={[t('quiz.pointsFromEach')]}
         inputId="pointsBox"
         outputId="pointsAnswer"
         name="points"
@@ -261,14 +266,14 @@ function generatePointsQuiz(
     pointQuizRows.push(
       <>
         <GenerateRow
-          label={["Points", <br />, "(from non-dealer)"]}
+          label={[t('quiz.pointsFromNonDealer')]}
           inputId="pointsBox"
           outputId="pointsAnswer"
           name="points"
           tooltipContent={pointsCalculations}
         />
         <GenerateRow
-          label={["Points", <br />, "(from dealer)"]}
+          label={[t('quiz.pointsFromDealer')]}
           inputId="pointsBoxDealer"
           outputId="pointsAnswerDealer"
           name="pointsDealer"
@@ -281,7 +286,7 @@ function generatePointsQuiz(
   if (!isTsumo) {
     pointQuizRows.push(
       <GenerateRow
-        label="Points"
+        label={t('quiz.points')}
         inputId="pointsBox"
         outputId="pointsAnswer"
         name="points"

@@ -1,0 +1,47 @@
+{
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "apply": "Apply"
+  },
+  "buttons": {
+    "checkAnswer": "Check Answer",
+    "newHand": "New Hand"
+  },
+  "quiz": {
+    "han": "Han",
+    "fu": "Fu",
+    "points": "Points",
+    "pointsFromEach": "Points (from each)",
+    "pointsFromNonDealer": "Points (from non-dealer)",
+    "pointsFromDealer": "Points (from dealer)"
+  },
+  "info": {
+    "round": "Round",
+    "seatWind": "Seat Wind",
+    "doraIndicators": "Dora indicators",
+    "uraDoraIndicators": "Uradora indicators",
+    "tsumo": "Tsumo",
+    "riichi": "Riichi",
+    "riichiSticks": "Riichi Sticks",
+    "honbaSticks": "Honba Sticks"
+  },
+  "options": {
+    "title": "Test Options",
+    "testHan": "Test Han",
+    "testFu": "Test Fu",
+    "testPoints": "Test Points",
+    "kiriageMangan": "Kiriage Mangan Mode",
+    "testHonba": "Include Honba Sticks",
+    "ignoreFuOnLimit": "Ignore Fu on Limit Hands",
+    "language": "Language"
+  },
+  "winRate": {
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "rate": "Rate"
+  },
+  "footer": {
+    "logIssues": "Log issues on"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "common": {
+    "yes": "はい",
+    "no": "いいえ",
+    "apply": "適用"
+  },
+  "buttons": {
+    "checkAnswer": "回答を確認",
+    "newHand": "次の問題"
+  },
+  "quiz": {
+    "han": "翻",
+    "fu": "符",
+    "points": "点数",
+    "pointsFromEach": "点数（各）",
+    "pointsFromNonDealer": "点数（子から）",
+    "pointsFromDealer": "点数（親から）"
+  },
+  "info": {
+    "round": "場",
+    "seatWind": "自風",
+    "doraIndicators": "ドラ表示牌",
+    "uraDoraIndicators": "裏ドラ表示牌",
+    "tsumo": "ツモ",
+    "riichi": "立直",
+    "riichiSticks": "供託棒",
+    "honbaSticks": "本場棒"
+  },
+  "options": {
+    "title": "テストオプション",
+    "testHan": "翻をテスト",
+    "testFu": "符をテスト",
+    "testPoints": "点数をテスト",
+    "kiriageMangan": "切り上げ満貫モード",
+    "testHonba": "本場棒を含む",
+    "ignoreFuOnLimit": "役満で符を無視",    
+    "language": "言語"
+  },
+  "winRate": {
+    "correct": "正解",
+    "wrong": "不正解",
+    "rate": "正解率"
+  },
+  "footer": {
+    "logIssues": "問題を報告"
+  }
+}
