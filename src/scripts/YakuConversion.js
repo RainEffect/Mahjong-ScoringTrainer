@@ -57,10 +57,18 @@ const yakuList = [
 ];
 
 /**
- * @param {string} tileString - A tile represented as one number and one letter (for the suit) e.g. 5s|1h|8p etc.
- * @returns {string} - The URL of the tile required
+ * @param {string} yakuId - The ID of the yaku
+ * @param {function} t - Translation function (optional). If not provided, returns English name.
+ * @returns {string} - The translated name of the yaku
  */
-export function YakuIdToName(yakuId) {
+export function YakuIdToName(yakuId, t = null) {
   const ID = parseInt(yakuId);
+  
+  // If translation function is provided, use it
+  if (t) {
+    return t(`yaku.${ID}`, yakuList[ID]);
+  }
+  
+  // Otherwise return the default English name
   return yakuList[ID];
 }

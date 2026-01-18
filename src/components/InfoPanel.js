@@ -3,10 +3,12 @@ import React from "react";
 import { Col } from "reactstrap";
 
 import * as TileConversion from "../scripts/TileConversion";
+import { useTranslation } from "../i18n/I18nContext";
 
 const imageWidth = 70;
 
 function InfoPanel(props) {
+  const { t } = useTranslation();
   const agari = props.agari;
   const options = props.options;
 
@@ -15,7 +17,7 @@ function InfoPanel(props) {
   if (options.pointSticks === true) {
     optionalElements.push(
       <Col fluid className="infoRow">
-        <div className="infoTitle">Riichi Sticks</div>
+        <div className="infoTitle">{t('info.riichiSticks')}</div>
         <div className="infoElement">{agari.riichiSticks}</div>
       </Col>
     );
@@ -24,7 +26,7 @@ function InfoPanel(props) {
   if (options.testHonba === true) {
     optionalElements.push(
       <Col fluid className="infoRow">
-        <div className="infoTitle">Honba Sticks</div>
+        <div className="infoTitle">{t('info.honbaSticks')}</div>
         <div className="infoElement">{agari.honbaSticks}</div>
       </Col>
     );
@@ -35,7 +37,7 @@ function InfoPanel(props) {
       []
     ) : (
       <Col fluid className="infoRow">
-        <div className="infoTitle">Uradora indicators</div>
+        <div className="infoTitle">{t('info.uraDoraIndicators')}</div>
         <div className="infoElement">
           {agari.uraDoraIndicators.map((tile) => generateTileImage(tile))}
         </div>
@@ -47,34 +49,34 @@ function InfoPanel(props) {
       <Col className="infoPanel bgcolor-1">
         <span className="infoContainer ">
           <Col fluid className="infoRow">
-            <div className="infoTitle">Round</div>
+            <div className="infoTitle">{t('info.round')}</div>
             <div className="infoElement">
               {generateWindImage(agari.roundWind)}
             </div>
           </Col>
           <Col fluid className="infoRow">
-            <div className="infoTitle">Seat Wind</div>{" "}
+            <div className="infoTitle">{t('info.seatWind')}</div>{" "}
             <div className="infoElement">
               {generateTileImage(agari.seatWind)}
             </div>
           </Col>
           <Col fluid className="infoRow">
-            <div className="infoTitle">Dora indicators</div>
+            <div className="infoTitle">{t('info.doraIndicators')}</div>
             <div className="infoElement">
               {agari.doraIndicators.map((tile) => generateTileImage(tile))}
             </div>
           </Col>
           {uraDoras}
           <Col fluid className="infoRow">
-            <div className="infoTitle">Tsumo</div>
+            <div className="infoTitle">{t('info.tsumo')}</div>
             <div className="infoElement">
-              {agari.isTsumo === true ? "Yes" : "No"}
+              {agari.isTsumo === true ? t('common.yes') : t('common.no')}
             </div>
           </Col>
           <Col fluid className="infoRow">
-            <div className="infoTitle">Riichi</div>
+            <div className="infoTitle">{t('info.riichi')}</div>
             <div className="infoElement">
-              {agari.isRiichi === true ? "Yes" : "No"}
+              {agari.isRiichi === true ? t('common.yes') : t('common.no')}
             </div>
           </Col>
           {optionalElements}
