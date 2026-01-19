@@ -25,6 +25,13 @@ export function I18nProvider({ children }) {
   // Save language preference when it changes
   useEffect(() => {
     localStorage.setItem('mahjong-language', currentLanguage);
+    
+    // Send language to Google Analytics as a user property
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('set', 'user_properties', {
+        app_language: currentLanguage
+      });
+    }
   }, [currentLanguage]);
 
   const changeLanguage = (languageCode) => {
