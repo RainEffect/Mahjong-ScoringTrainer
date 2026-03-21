@@ -6,6 +6,7 @@ import { useTranslation } from '../i18n/I18nContext';
 // Pre-import markdown files to ensure bundlers include them reliably
 import scoringEn from '../helpPages/scoring.en.md';
 import scoringJa from '../helpPages/scoring.ja.md';
+import scoringKo from '../helpPages/scoring.ko.md';
 
 require('../extensions/MarkdownTiles.js');
 
@@ -25,6 +26,7 @@ function HelpPanel(props) {
     const mdMap = {
       en: scoringEn,
       ja: scoringJa,
+      ko: scoringKo
     };
 
     const loadHelpFile = async () => {

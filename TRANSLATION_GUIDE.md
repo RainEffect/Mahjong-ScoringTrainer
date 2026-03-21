@@ -6,6 +6,7 @@ This project supports multiple languages to make the Mahjong Scoring Trainer acc
 
 - **English** (en) - Default
 - **Japanese** (ja)
+- **Korean** (ko)
 
 ## How to Add or Update Translations
 
@@ -18,6 +19,7 @@ UI text translations are stored in JSON files in `src/i18n/translations/`.
 src/i18n/translations/
 ├── en.json  # English translations
 └── ja.json  # Japanese translations
+└── ko.json  # Korean translations
 ```
 
 **To add a new language:**

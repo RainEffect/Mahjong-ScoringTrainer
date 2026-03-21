@@ -1,18 +1,21 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import enTranslations from './translations/en.json';
 import jaTranslations from './translations/ja.json';
+import koTranslations from './translations/ko.json';
 
 const I18nContext = createContext();
 
 // Available languages
 export const LANGUAGES = {
   en: { code: 'en', name: 'English', flag: '🇬🇧' },
-  ja: { code: 'ja', name: '日本語', flag: '🇯🇵' }
+  ja: { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  ko: { code: 'ko', name: '한국어', flag: '🇰🇷' },
 };
 
 const translations = {
   en: enTranslations,
-  ja: jaTranslations
+  ja: jaTranslations,
+  ko: koTranslations
 };
 
 export function I18nProvider({ children }) {
