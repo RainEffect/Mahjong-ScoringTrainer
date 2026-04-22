@@ -30,13 +30,13 @@
     "honbaSticks": "本场棒"
   },
   "options": {
-    "title": "训练选项",
-    "testHan": "训练番数",
-    "testFu": "训练符数",
-    "testPoints": "训练点数",
+    "title": "网站选项",
+    "testHan": "番数计算练习",
+    "testFu": "符数计算练习",
+    "testPoints": "点数计算练习",
     "kiriageMangan": "切上满贯模式",
-    "testHonba": "包含本场棒计算",
-    "ignoreFuOnLimit": "役满免算符",
+    "testHonba": "包含本场棒",
+    "ignoreFuOnLimit": "满贯免算符",
     "language": "语言"
   },
   "winRate": {
@@ -62,7 +62,7 @@
     "open_terminal_pon": "幺九明刻",
     "pair_wait": "单骑听牌",
     "penchan": "边张听牌",
-    "rounding": "向上取整",
+    "rounding": "向上进位",
     "tsumo": "自摸和",
     "valued_pair": "役牌雀头"
   },
